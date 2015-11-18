@@ -23,7 +23,7 @@
                         if (error || !token) {
                             app.showNotification("No token: " + error);
                         }
-                        var email = result.value;
+                        var email = authContext._user.userName;
                         var url = "https://graph.microsoft.com/beta/" + config.tenant + "/users/" + email;
                         var html = "<ul>";
                         $.ajax({
